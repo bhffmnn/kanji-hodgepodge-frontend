@@ -4,8 +4,8 @@
       <h1>Kanji Hodgepodge</h1>
       <nav class="flexbox-spaced">
         <router-link :to="{name: 'Home'}">Home</router-link>
-        <div class="vertical-line"></div>
         <router-link :to="{name: 'About'}">About</router-link>
+        <router-link :to="{name: 'Privacy'}">Privacy Policy</router-link>
       </nav>
     </header>
   </div>
