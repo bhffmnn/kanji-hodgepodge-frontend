@@ -4,7 +4,7 @@
     <div class="flex-grow-100 flexbox-spaced" style="flex-basis: 440px;">
       <kanji-properties-box class="flex-grow-1" :kanji="this.kanji" />
       <kanji-special-joyo-box class="flex-grow-1" :kanji="kanji" v-if="specialJoyoReadingsLength > 0"></kanji-special-joyo-box>
-      <kanji-vocabulary-box class="flex-grow-1" :kanji="kanji"/>
+      <kanji-vocabulary-box v-if="kanji.vocabulary.length" class="flex-grow-1" :kanji="kanji"/>
     </div>
   </div>
 </template>

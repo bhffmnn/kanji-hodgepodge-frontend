@@ -3,7 +3,7 @@
     <div class="w3-bar w3-white">
       <button class="w3-bar-item w3-button" @click="filterVocabulary('')">All</button>
       <button
-        v-for="reading in allReadings"
+        v-for="reading in filteredReadings"
         :key="reading.value"
         class="w3-bar-item w3-button"
         @click="filterVocabulary(reading.value)"
@@ -44,8 +44,14 @@ export default {
     }
   },
   computed: {
-    allReadings() {
-      return this.kanji.readingsKun.concat(this.kanji.readingsOn);
+    filteredReadings() {
+      const allReadings = this.kanji.readingsKun.concat(this.kanji.readingsOn);
+      const filtered = allReadings.filter(reading => {
+        const found = this.kanji.vocabulary.find(vocab => vocab.kanjiReading === reading.value);
+        return found;
+      });
+      console.log(filtered);
+      return filtered;
     },
     topTenVocabulary() {
       if (this.filteredVocabulary.length >= 10) {
