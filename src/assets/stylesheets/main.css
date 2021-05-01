@@ -1,0 +1,175 @@
+:root {
+  --blue-grey: #607d8b;
+  --font-size-standard: 16px;
+  --font-size-large: 22px;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-size: var(--font-size-standard)
+}
+body {
+  line-height: 1.5;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 18px;
+}
+
+/* Font */
+* {
+  font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "游ゴシック",
+    "游ゴシック体", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ ゴシック",
+    "MS Gothic", HiraKakuProN-W3, "TakaoExゴシック", TakaoExGothic,
+    "MotoyaLCedar", "Droid Sans Japanese", sans-serif;
+}
+.mincho {
+  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "游明朝", "游明朝体",
+    YuMincho, "Yu Mincho", "ＭＳ 明朝", "MS Mincho", HiraMinProN-W3,
+    "TakaoEx明朝", TakaoExMincho, "MotoyaLCedar", "Droid Sans Japanese", serif;
+}
+.main-font-size-tiny {
+  font-size:10px!important;
+}
+.main-font-size-standard {
+  font-size: var(--font-size-standard);
+}
+.main-font-size-large {
+  font-size: var(--font-size-large);
+}
+
+/* Flex Box */
+.flexbox {
+  display: flex;
+}
+.f-columns {
+  flex-direction: column;
+}
+.f-gap {
+  gap: 10px;
+}
+.f-gap-small {
+  gap: 5px;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+.f-align-end {
+  align-items: flex-end;
+}
+.f-align-center {
+  align-items: center;
+}
+.f-align-baseline {
+  align-items: baseline;
+}
+.f-justify-center {
+  justify-content: center;
+}
+.f-justify-space-between {
+  justify-content: space-between;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-grow-100 {
+  flex-grow: 100;
+}
+
+/* Padding */
+.main-padding-small {
+  padding: 4px 4px !important;
+}
+.main-padding {
+  padding: 16px 16px;
+}
+.main-padding-sides-small {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+/* Color */
+.main-blue-grey {
+  background-color: var(--blue-grey) !important;
+  color: white !important;
+}
+.main-white {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Buttons */
+.main-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Borders */
+.main-border {
+  border: 1px solid #ccc;
+}
+.main-border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Misc */
+.main-round {
+  border-radius: 4px;
+}
+.main-round-large {
+  border-radius: 32px;
+}
+
+/* Box Shadow */
+.main-box-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Table */
+.main-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+}
+.main-table td,
+.main-table th {
+  padding: 8px 8px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* hr */
+hr {
+  border:0;
+  border-top:1px solid #ccc;
+  margin: 16px 0
+}

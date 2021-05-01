@@ -1,10 +1,10 @@
 <template>
   <div>
     <h5>Variants</h5>
-    <div class="flexbox-spaced">
-      <span v-for="variant in variants" :key="variant">
-        <span class="w3-tag w3-blue-grey w3-round-xxlarge">{{getTypeName(variant.type)}}</span>      
-        {{variant.literal}}
+    <div class="flexbox f-wrap f-gap">
+      <span class="flexbox f-gap-small" v-for="variant in variants" :key="variant">
+        <span class="main-padding-sides-small main-blue-grey main-round-large">{{getTypeName(variant.type)}}</span>      
+        <span>{{variant.literal}}</span>
       </span>
     </div>
   </div>

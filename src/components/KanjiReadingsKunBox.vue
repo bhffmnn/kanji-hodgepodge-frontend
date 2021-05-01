@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h5>Kun-Readings</h5>
-    <div class="flexbox-spaced">
+  <div class="flexbox f-columns f-gap">
+    <h5 style="margin: 0">Kun-Readings</h5>
+    <div class="flexbox f-wrap f-gap">
       <span v-if="readingsKun.legnt === 0">–</span>
       <span class="reading-span" v-for="reading in readingsKun" :key="reading" :class="getReadingClass(reading)">{{reading.value}}</span>
     </div>
@@ -32,11 +32,6 @@ export default {
 </script>
 
 <style scoped>
-.flexbox-spaced {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
 .joyo {
   border-radius: 32px;
   border: 2px solid #ccc;

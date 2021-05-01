@@ -1,5 +1,5 @@
 <template>
-  <div class="w3-panel w3-padding w3-card">
+  <div class="main-padding main-box-shadow">
     <div id="about">
       <h2>About</h2>
       <p>

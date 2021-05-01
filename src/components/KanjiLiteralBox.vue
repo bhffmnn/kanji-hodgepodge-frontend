@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="w3-container w3-white w3-center w3-border w3-padding w3-card" >
+    <div class="main-white flexbox f-columns f-align-center main-border main-padding main-box-shadow" >
       <span id="character-container">
         <img id="stoke-order-diagram" v-if="strokesAvailable" v-show="font === 'strokes'" alt="Stroke Order Diagram" :src="strokeSvgPath">
       </span>
         <span style="font-size: 100px" :class="font">{{literal}}</span>      
       <div>
-        <button id="btn-mincho" class="btn-active w3-button w3-padding-small btn-medium-grey w3-tiny" @click="mincho">Mincho</button>
-        <button id="btn-gothic" class="w3-button w3-padding-small btn-medium-grey w3-tiny" @click="gothic">Gothic</button>
-        <button id="btn-strokes" class="w3-button w3-padding-small btn-medium-grey w3-tiny" :disabled="!strokesAvailable" @click="strokes">Strokes</button>
+        <button id="btn-mincho" class="btn-active main-button main-padding-small btn-medium-grey main-font-size-tiny" @click="mincho">Mincho</button>
+        <button id="btn-gothic" class="main-button main-padding-small btn-medium-grey main-font-size-tiny" @click="gothic">Gothic</button>
+        <button id="btn-strokes" class="main-button main-padding-small btn-medium-grey main-font-size-tiny" :disabled="!strokesAvailable" @click="strokes">Strokes</button>
       </div>
     </div>
   </div> 
@@ -95,8 +95,8 @@ export default {
 #stoke-order-diagram {
   width: 125px;
   position: absolute;
-  left: -20px;
-  bottom: -20px;
+  left: -62.5px;
+  top: 10px;
 }
 .strokes {
   visibility: hidden;

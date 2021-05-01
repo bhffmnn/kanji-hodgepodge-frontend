@@ -1,12 +1,12 @@
 <template>
-  <div class="flexbox-columns-spaced">
+  <div class="flexbox f-columns f-gap">
     <search-bar @searchResults="getResults" />
     <result-bar :results="result" />
     <div>
       <kanji-display-box v-if="kanjiObject.literal" :kanji="kanjiObject" />
       <div v-else>
         <h4>Two methods to search:</h4>
-        <ol class="flexbox-columns-spaced">
+        <ol class="flexbox f-columns f-gap">
           <li>
             By text: Type a single kanji, an on-reading in katakana, a
             kun-reading in hiragana or an English meaning into the search bar

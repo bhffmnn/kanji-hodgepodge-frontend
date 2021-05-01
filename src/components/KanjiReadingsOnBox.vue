@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <h5>On-Readings</h5>
-    <div class="flexbox-spaced">
+  <div class="flexbox f-columns f-gap">
+    <h5 style="margin: 0">On-Readings</h5>
+    <div class="flexbox f-wrap f-gap">
       <span v-if="readingsOn.length === 0">–</span>
-      <span class="reading-span" v-for="reading in readingsOn" :key="reading" :class="getReadingClass(reading)">
-        <span v-for="type in reading.types" :key="type" class="w3-tag w3-blue-grey w3-round-xxlarge">{{getTypeName(type)}}</span>
+      <span class="reading-span flexbox f-gap-small" v-for="reading in readingsOn" :key="reading" :class="getReadingClass(reading)">
+        <span v-for="type in reading.types" :key="type" class="main-padding-sides-small main-blue-grey main-round-large">{{getTypeName(type)}}</span>
         {{reading.value}}      
       </span>
     </div>
@@ -41,11 +41,6 @@ export default {
 </script>
 
 <style scoped>
-.flexbox-spaced {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
 .joyo {
   border-radius: 32px;
   border: 2px solid #ccc;

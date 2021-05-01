@@ -1,28 +1,30 @@
 <template>
-  <div class="w3-white w3-border w3-card w3-padding">
-    <div class="w3-bar w3-white">
-      <button class="w3-bar-item w3-button" @click="filterVocabulary('')">All</button>
+  <div class="main-white main-border main-box-shadow main-padding">
+    <div class="main-white">
+      <button class="main-button" @click="filterVocabulary('')">All</button>
       <button
         v-for="reading in filteredReadings"
         :key="reading.value"
-        class="w3-bar-item w3-button"
+        class="main-button"
         @click="filterVocabulary(reading.value)"
       >
         {{ reading.value }}
       </button>
     </div>
-    <table class="w3-table">
+    <table class="main-table">
       <tr>
         <th>Form</th>
         <th>Reading</th>
         <th>Meaning</th>
       </tr>
-      <tr v-for="(vocable, vIndex) in topTenVocabulary" :key="vIndex" :class="tableRowBackgroundClass(vIndex)" >
+      <tr v-for="(vocable, vIndex) in topTenVocabulary" :key="vIndex"  >
         <td class="nowrap">{{vocable.form}}</td>
         <td class="nowrap">{{vocable.reading.value}}</td>
-        <td class="flexbox-spaced">
-          <div class="w3-margin-bottom" v-for="(meaning, mIndex) in vocable.meanings" :key="mIndex">
-            <span v-for="(value, mValueIndex) in meaning.values" :key="mValueIndex">{{value}}<span v-if="mValueIndex < meaning.values.length - 1">; </span></span>
+        <td>
+          <div class="flexbox f-columns f-gap">          
+            <div class="flexbox f-gap-small" v-for="(meaning, mIndex) in vocable.meanings" :key="mIndex">
+              <span v-for="(value, mValueIndex) in meaning.values" :key="mValueIndex">{{value}}<span v-if="mValueIndex < meaning.values.length - 1">;</span></span>
+            </div>
           </div>
         </td>
       </tr>
@@ -91,5 +93,13 @@ export default {
 }
 .dark-row {
   background: #f1f1f1;
+}
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+table td, table th {
+    border-bottom: 1px solid #ccc;
 }
 </style>

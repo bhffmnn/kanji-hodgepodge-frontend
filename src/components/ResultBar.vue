@@ -1,5 +1,5 @@
 <template>
-  <div style="min-height: 3.2em;" class="scrollable w3-white w3-padding w3-border">
+  <div style="min-height: 3.2em;" class="scrollable main-white main-padding main-border">
     <result-item v-for="result in results" :key="result" :result="result" />
   </div>  
 </template>

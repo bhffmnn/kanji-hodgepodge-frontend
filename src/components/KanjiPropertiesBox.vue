@@ -1,6 +1,6 @@
 <template>
-<div class="flex-columns gap-tiny">
-  <div class="w3-white w3-border w3-card w3-padding">
+<div class="flexbox f-columns f-gap-small">
+  <div class="main-border main-box-shadow main-padding">
     <kanji-misc-box :kanji="kanji"/>
     <hr>
     <kanji-readings-on-box :readingsOn="kanji.readingsOn" />
@@ -17,16 +17,16 @@
       <kanji-variants-box :variants="kanji.variants" />
     </div>    
   </div>
-  <div class="flexbox gap-small padding-medium-sides">
-    <span class="flexbox gap-tiny">
+  <div class="flexbox f-wrap f-align-center f-gap padding-medium-sides">
+    <span class="flexbox f-align-center f-gap-small">
       <span class="joyo-example"></span>
       <span>Jōyō reading</span>
     </span>    
-    <span class="flexbox gap-tiny">
+    <span class="flexbox f-align-center f-gap-small">
       <span class="special-use-example"></span>
       <span>Jōyō reading with special / limited use</span>    
     </span>
-    <span class="flexbox gap-tiny">
+    <span class="flexbox f-align-center f-gap-small">
       <span class="on-tag-example"></span>
       <span>On-reading type</span>
     </span>    
@@ -60,22 +60,6 @@ export default {
 }
 </script>
 <style scoped>
-.gap-small {
-  gap: 10px;
-}
-.gap-tiny {
-  gap: 5px;
-}
-.flexbox {
-  font-size: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.flex-columns {
-  display: flex;
-  flex-direction: column;
-}
 .joyo-example {
   width: 12px;
   border-top: 2px solid #ccc;

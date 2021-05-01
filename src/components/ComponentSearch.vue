@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div id="component-search-results" class="flexbox-with-wrap w3-border-bottom">
-      <button class="w3-button w3-padding-small w3-round-xxlarge" @click="emitLiteral" v-for="literal in literals" :key="literal">{{ literal }}</button>
+    <div id="component-search-results" class="flexbox f-wrap main-border-bottom">
+      <button class="main-button main-padding-small main-round-large" @click="emitLiteral" v-for="literal in literals" :key="literal">{{ literal }}</button>
     </div>
-    <div id="component-list" class="flexbox-with-wrap">
+    <div id="component-list" class="flexbox f-wrap">
       <template v-for="number in componentStrokeNumbers" :key="number">
-        <span class="component-list-item w3-blue-grey">{{number}}</span>
+        <span class="component-list-item main-blue-grey">{{number}}</span>
         <button
-        class="w3-button w3-padding-small component-list-item"
+        class="main-button main-padding-small component-list-item"
         @click="selectComponent"
         :id="cs.component"
         v-for="cs in components.filter(c => c.strokeCount === number)"
@@ -101,13 +101,6 @@ export default {
 </script>
 
 <style scoped>
-.flexbox-with-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-.flex-gap {
-  gap: 10px;
-}
 #component-search-results {
   overflow-y: auto;
   height: 4em;

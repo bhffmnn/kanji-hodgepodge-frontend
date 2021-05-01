@@ -1,5 +1,5 @@
 <template>
-  <router-link class="w3-button w3-padding-small w3-round-xxlarge" :to="{name: 'Home', params: {kanji: result}}">{{this.result}}</router-link>
+  <router-link class="main-button main-padding-small main-round-large" :to="{name: 'Home', params: {kanji: result}}">{{this.result}}</router-link>
 </template>
 
 <script>

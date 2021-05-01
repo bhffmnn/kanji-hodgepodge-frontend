@@ -1,15 +1,15 @@
 <template>
-<div class="flexbox-columns-spaced">
-  <div class="flexbox-spaced">
-    <button class="w3-button w3-border w3-round" @click="toggleComponentSearchVisibilty">Parts</button>
-    <div class="w3-border w3-round-xxlarge tiny-padding flex-grow-1">
-      <form class="flexbox">
-        <input class="" v-model="text" type="text" placeholder="漢字, オンヨミ, くんよみ, meaning">
-        <button class="w3-button w3-blue-grey w3-round-xxlarge" @keyup.enter.prevent="search" @click.prevent="search" type="submit">Search</button>
+<div class="flexbox f-columns f-gap">
+  <div class="flexbox f-wrap f-gap">
+    <button class="main-button main-border main-round" @click="toggleComponentSearchVisibilty">Parts</button>
+    <div class="main-border main-round-large main-padding-small flex-grow-1">
+      <form class="flexbox f-align-center">
+        <input v-model="text" type="text" placeholder="漢字, オンヨミ, くんよみ, meaning">
+        <button class="main-button main-blue-grey main-round-large" @keyup.enter.prevent="search" @click.prevent="search" type="submit">Search</button>
       </form>
     </div>
   </div>
-  <div v-show="showComponentSearch" class="w3-border w3-round small-padding">
+  <div v-show="showComponentSearch" class="main-border main-round main-padding">
     <component-search @componentSearchChoose="setText" />
   </div>
 </div>
@@ -81,16 +81,6 @@ export default {
 </script>
 
 <style scoped>
-.tiny-padding {
-  padding: 4px;
-}
-.small-padding {
-  padding: 8px;
-}
-.flexbox {
-  display: flex;
-  align-items: center;
-}
 input {
   margin-left: 10px;
   width: 100%;

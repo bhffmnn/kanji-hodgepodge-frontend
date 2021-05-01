@@ -1,11 +1,11 @@
 <template>
-  <div style="display: flex;">
+  <div class="flexbox f-gap">
     <kanji-misc-item itemName="Radical" :itemValue="kanji.radical" />
-    <div class="vertical-line w3-margin-left w3-margin-right"></div>
+    <div class="vertical-line"></div>
     <kanji-misc-item itemName="Strokes:" :itemValue="kanji.strokeCount.toString()" />
-    <div class="vertical-line w3-margin-left w3-margin-right"></div>
+    <div class="vertical-line"></div>
     <kanji-misc-item itemName="Type" :itemValue="kanjiType" />
-    <div class="vertical-line w3-margin-left w3-margin-right"></div>
+    <div class="vertical-line"></div>
     <kanji-misc-item itemName="Unicode" :itemValue="codepointHex" />    
   </div>
 </template>
@@ -39,9 +39,9 @@ export default {
 
 <style>
 div.vertical-line {
-  width: 1px; /* Line width */
-  background-color: #eee; /* Line color */
-  height: auto; /* Override in-line if you want specific height. */
+  width: 1px;
+  background-color: #ccc;
+  height: auto;
   display: inline-block; 
 }
 </style>

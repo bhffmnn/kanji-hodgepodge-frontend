@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h5>Nanori</h5>
-    <div class="flexbox-spaced">
+  <div class="flexbox f-columns f-gap">
+    <h5 style="margin: 0">Nanori</h5>
+    <div class="flexbox f-wrap f-gap">
       <span v-for="nanori in nanoris" :key="nanori">{{nanori}}</span>
     </div>
 </div>
@@ -19,9 +19,4 @@ export default {
 </script>
 
 <style scoped>
-.flexbox-spaced {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
 </style>

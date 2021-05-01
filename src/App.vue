@@ -36,7 +36,7 @@ export default {
 * {
   font-family : 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', '游ゴシック', '游ゴシック体', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ ゴシック', 'MS Gothic', HiraKakuProN-W3, 'TakaoExゴシック', TakaoExGothic, 'MotoyaLCedar', 'Droid Sans Japanese', sans-serif;
 }
-@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import url("./assets/stylesheets/main.css");
 .mincho {
     font-family : 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', '游明朝', '游明朝体', YuMincho,'Yu Mincho', 'ＭＳ 明朝', 'MS Mincho', HiraMinProN-W3, 'TakaoEx明朝', TakaoExMincho, 'MotoyaLCedar', 'Droid Sans Japanese', serif;    
 }
@@ -52,20 +52,10 @@ html, body {
 .flex-grow-1 {
   flex-grow: 1;
 }
-.flexbox-spaced {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
 .footer {
   display: flex;
   align-items: flex-end;
   flex-grow: 1;
   justify-content: center;
-}
-.flexbox-columns-spaced {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 </style>
