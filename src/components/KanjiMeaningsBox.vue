@@ -1,7 +1,7 @@
 <template>
   <div class="flexbox f-columns f-gap">
     <h5 style="margin: 0">Meanings</h5>
-    <div class="flexbox f-wrap f-gap">
+    <div class="flexbox f-wrap f-gap-small">
       <span v-if="meanings.length === 0">–</span>
       <span v-for="(meaning, index) in meanings" :key="index">{{meaning}}<span v-if="index < meanings.length - 1">; </span> </span>
     </div>
