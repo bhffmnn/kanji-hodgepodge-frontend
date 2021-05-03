@@ -1,6 +1,6 @@
 <template>
   <div class="flexbox f-columns f-gap">
-    <h5 style="margin: 0">Kun-Readings</h5>
+    <h5>Kun-Readings</h5>
     <div class="flexbox f-wrap f-gap">
       <span v-if="readingsKun.legnt === 0">–</span>
       <span class="reading-span" v-for="reading in readingsKun" :key="reading" :class="getReadingClass(reading)">{{reading.value}}</span>

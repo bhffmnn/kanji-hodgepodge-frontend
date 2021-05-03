@@ -1,6 +1,6 @@
 <template>
   <div class="flexbox f-columns f-gap main-border main-box-shadow main-padding">
-    <h5 style="margin: 0">Example Vocabulary</h5>
+    <h5>Example Vocabulary</h5>
     <div class="flexbox f-gap-small">
       <button class="main-button main-round btn-voc btn-active" @click="filterButtonAction">All</button>
       <button

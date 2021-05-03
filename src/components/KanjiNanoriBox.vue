@@ -1,6 +1,6 @@
 <template>
   <div class="flexbox f-columns f-gap">
-    <h5 style="margin: 0">Nanori</h5>
+    <h5>Nanori</h5>
     <div class="flexbox f-wrap f-gap">
       <span v-for="nanori in nanoris" :key="nanori">{{nanori}}</span>
     </div>
