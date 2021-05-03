@@ -1,6 +1,7 @@
 <template>
-  <div class="main-white main-border main-box-shadow main-padding">
-    <div class="main-white">
+  <div class="flexbox f-columns f-gap main-border main-box-shadow main-padding">
+    <h5 style="margin: 0">Example Vocabulary</h5>
+    <div>
       <button class="main-button" @click="filterVocabulary('')">All</button>
       <button
         v-for="reading in filteredReadings"
@@ -98,7 +99,6 @@ table {
     border-collapse: collapse;
     border-style: hidden;
 }
-
 table td, table th {
     border-bottom: 1px solid #ccc;
 }
