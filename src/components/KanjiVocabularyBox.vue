@@ -23,9 +23,9 @@
         <td class="nowrap">{{vocable.reading.value}}</td>
         <td>
           <div class="flexbox f-columns f-gap">          
-            <div v-for="(meaning, mIndex) in vocable.meanings" :key="mIndex">
-              <span v-for="(value, mValueIndex) in meaning.values" :key="mValueIndex">{{value}}<span v-if="mValueIndex < meaning.values.length - 1">; </span></span>
-            </div>
+            <span class="flexbox f-gap-small" v-for="(meaning, mIndex) in vocable.meanings" :key="mIndex">
+              <span v-if="vocable.meanings.length > 1">{{mIndex + 1}}.</span><span><span v-for="(value, mValueIndex) in meaning.values" :key="mValueIndex">{{value}}<span v-if="mValueIndex < meaning.values.length - 1">; </span></span></span>
+            </span>
           </div>
         </td>
       </tr>
