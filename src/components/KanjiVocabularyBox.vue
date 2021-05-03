@@ -1,13 +1,13 @@
 <template>
   <div class="flexbox f-columns f-gap main-border main-box-shadow main-padding">
     <h5 style="margin: 0">Example Vocabulary</h5>
-    <div>
-      <button class="main-button" @click="filterVocabulary('')">All</button>
+    <div class="flexbox f-gap-small">
+      <button class="main-button main-round btn-voc btn-active" @click="filterButtonAction">All</button>
       <button
         v-for="reading in filteredReadings"
         :key="reading.value"
-        class="main-button"
-        @click="filterVocabulary(reading.value)"
+        class="main-button main-round btn-voc"
+        @click="filterButtonAction"
       >
         {{ reading.value }}
       </button>
@@ -23,8 +23,8 @@
         <td class="nowrap">{{vocable.reading.value}}</td>
         <td>
           <div class="flexbox f-columns f-gap">          
-            <div class="flexbox f-gap-small" v-for="(meaning, mIndex) in vocable.meanings" :key="mIndex">
-              <span v-for="(value, mValueIndex) in meaning.values" :key="mValueIndex">{{value}}<span v-if="mValueIndex < meaning.values.length - 1">;</span></span>
+            <div v-for="(meaning, mIndex) in vocable.meanings" :key="mIndex">
+              <span v-for="(value, mValueIndex) in meaning.values" :key="mValueIndex">{{value}}<span v-if="mValueIndex < meaning.values.length - 1">; </span></span>
             </div>
           </div>
         </td>
@@ -74,6 +74,11 @@ export default {
     }
   },
   methods: {
+    filterButtonAction(e) {
+      this.filterVocabulary(e.target.textContent);
+      this.$el.querySelectorAll(".btn-voc").forEach(el => el.classList.remove("btn-active"))
+      e.target.classList.add("btn-active")      
+    },
     tableRowBackgroundClass(index) {
       if (index % 2 === 0) {
         return "dark-row";
@@ -81,7 +86,7 @@ export default {
       return "";
     },
     filterVocabulary(reading) {
-      if (reading === "") this.filteredVocabulary = this.kanji.vocabulary;
+      if (reading === "All") this.filteredVocabulary = this.kanji.vocabulary;
       else this.filteredVocabulary = this.kanji.vocabulary.filter(vocab => vocab.kanjiReading === reading);
     }
   }
@@ -101,5 +106,11 @@ table {
 }
 table td, table th {
     border-bottom: 1px solid #ccc;
+}
+.btn-active {
+  border: 1px solid #ccc !important;
+}
+.btn-voc {
+   border: 1px solid white;
 }
 </style>
