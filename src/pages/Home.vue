@@ -8,16 +8,16 @@
         <h4>Two methods to search:</h4>
         <ol class="flexbox f-columns f-gap">
           <li>
-            By text: Type a single kanji, an on-reading in katakana, a
+            <b>By text:</b> Type a single kanji, an on-reading in katakana, a
             kun-reading in hiragana or an English meaning into the search bar
             and hit 'Search'. If your search term yields multiple results you
             can choose the desired character from the box below the search bar.
           </li>
           <li>
-            By components: Click on "Parts" to open the component search box.
-            Choose the components the kanji you're search for is composed of,
-            choose the desired character from the results that are displayed
-            above and hit 'Search'.
+            <b>By components:</b> Click on 'Parts' to open the component search
+            box. Choose the components the kanji you're searching for is
+            composed of, choose the desired character from the results that are
+            displayed above and hit 'Search'.
           </li>
         </ol>
       </div>
