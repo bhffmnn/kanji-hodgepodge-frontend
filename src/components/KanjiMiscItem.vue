@@ -1,5 +1,5 @@
 <template>
-  <span class="flexbox f-wrap f-gap f-align-baseline"><h5>{{itemName}}</h5><span>{{itemValue}}</span></span>
+  <span class="flexbox f-wrap f-gap f-align-baseline"><h5 class="main-margin-0">{{itemName}}</h5><span>{{itemValue}}</span></span>
 </template>
 
 <script>

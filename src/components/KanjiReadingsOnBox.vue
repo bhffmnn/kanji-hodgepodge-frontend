@@ -1,6 +1,6 @@
 <template>
   <div class="flexbox f-columns f-gap">
-    <h5>On-Readings</h5>
+    <h5 class="main-margin-0">On-Readings</h5>
     <div class="flexbox f-wrap f-gap">
       <span v-if="readingsOn.length === 0">–</span>
       <span class="reading-span flexbox f-gap-small" v-for="reading in readingsOn" :key="reading" :class="getReadingClass(reading)">

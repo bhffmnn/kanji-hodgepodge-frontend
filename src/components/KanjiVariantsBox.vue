@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h5>Variants</h5>
+  <div class="flexbox f-columns f-gap">
+    <h5 class="main-margin-0">Variants</h5>
     <div class="flexbox f-wrap f-gap">
       <span class="flexbox f-gap-small" v-for="variant in variants" :key="variant">
         <span class="main-padding-sides-small main-blue-grey main-round-large">{{getTypeName(variant.type)}}</span>      

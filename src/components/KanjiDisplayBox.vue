@@ -1,7 +1,7 @@
 <template>
   <div id="display-box" class="flexbox f-wrap f-gap">
     <kanji-literal-box class="flex-grow-1" style="width: 220px;" :literal="this.kanji.literal"/>
-    <div class="flex-grow-100 flexbox f-wrap f-gap" style="flex-basis: 440px;">
+    <div class="flex-grow-100 flexbox f-columns f-wrap f-gap" style="flex-basis: 440px;">
       <kanji-properties-box class="flex-grow-1" :kanji="this.kanji" />
       <kanji-special-joyo-box class="flex-grow-1" :kanji="kanji" v-if="specialJoyoReadingsLength > 0"></kanji-special-joyo-box>
       <kanji-vocabulary-box v-if="kanji.vocabulary.length" class="flex-grow-1" :kanji="kanji"/>

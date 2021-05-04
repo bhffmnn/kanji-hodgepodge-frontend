@@ -1,7 +1,7 @@
 <template>
   <div class="flexbox f-columns f-gap main-border main-box-shadow main-padding">
-    <h5>Example Vocabulary</h5>
-    <div class="flexbox f-gap-small">
+    <h5 class="main-margin-0">Example Vocabulary</h5>
+    <div class="flexbox f-wrap f-gap-small">
       <button class="main-button main-round btn-voc btn-active" @click="filterButtonAction">All</button>
       <button
         v-for="reading in filteredReadings"
