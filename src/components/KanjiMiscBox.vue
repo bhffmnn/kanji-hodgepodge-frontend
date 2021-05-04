@@ -2,7 +2,7 @@
   <div class="flexbox f-gap">
     <kanji-misc-item itemName="Radical" :itemValue="kanji.radical" />
     <div class="vertical-line"></div>
-    <kanji-misc-item itemName="Strokes:" :itemValue="kanji.strokeCount.toString()" />
+    <kanji-misc-item itemName="Strokes" :itemValue="kanji.strokeCount.toString()" />
     <div class="vertical-line"></div>
     <kanji-misc-item itemName="Type" :itemValue="kanjiType" />
     <div class="vertical-line"></div>

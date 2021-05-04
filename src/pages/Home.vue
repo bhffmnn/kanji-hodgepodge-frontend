@@ -8,7 +8,7 @@
         <h4>Two methods to search:</h4>
         <ol class="flexbox f-columns f-gap">
           <li>
-            <b>By text:</b> Type a single kanji, an on-reading in katakana, a
+            <b>By text:</b> Type in a single kanji, an on-reading in katakana, a
             kun-reading in hiragana or an English meaning into the search bar
             and hit 'Search'. If your search term yields multiple results you
             can choose the desired character from the box below the search bar.
