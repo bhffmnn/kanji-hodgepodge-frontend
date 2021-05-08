@@ -1,20 +1,37 @@
 <template>
-<div class="flexbox f-columns f-gap">
-  <div class="flexbox f-wrap f-gap">
-    <button class="main-button main-border main-round" @click="toggleComponentSearchVisibilty">Parts</button>
-    <div class="main-border main-round-large main-padding-small flex-grow-1">
-      <form class="flexbox f-align-center">
-        <input v-model="text" type="text" placeholder="漢字, オンヨミ, くんよみ, meaning">
-        <button class="flex-shrink-0 main-button main-blue-grey main-round-large" @keyup.enter.prevent="search" @click.prevent="search" type="submit">Search</button>
-      </form>
+  <div class="flexbox f-columns f-gap">
+    <div class="flexbox f-wrap-reverse f-gap">
+      <button
+        class="main-button main-border main-round"
+        @click="toggleComponentSearchVisibilty"
+      >
+        Parts
+      </button>
+      <div class="main-border main-round-large main-padding-small flex-grow-1">
+        <form class="flexbox f-align-center">
+          <input
+            v-model="text"
+            type="text"
+            placeholder="漢字, オンヨミ, くんよみ, meaning"
+          />
+          <button
+            class="flex-shrink-0 main-button main-blue-grey main-round-large"
+            @keyup.enter.prevent="search"
+            @click.prevent="search"
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      v-show="showComponentSearch"
+      class="main-border main-round main-padding"
+    >
+      <component-search @componentSearchChoose="setText" />
     </div>
   </div>
-  <div v-show="showComponentSearch" class="main-border main-round main-padding">
-    <component-search @componentSearchChoose="setText" />
-  </div>
-</div>
-
-  
 </template>
 
 <script>

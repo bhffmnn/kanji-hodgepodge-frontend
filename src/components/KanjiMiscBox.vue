@@ -4,9 +4,7 @@
     <div class="vertical-line"></div>
     <kanji-misc-item itemName="Strokes" :itemValue="kanji.strokeCount.toString()" />
     <div class="vertical-line"></div>
-    <kanji-misc-item itemName="Type" :itemValue="kanjiType" />
-    <div class="vertical-line"></div>
-    <kanji-misc-item itemName="Unicode" :itemValue="codepointHex" />    
+    <kanji-misc-item itemName="Type" :itemValue="kanjiType" />  
   </div>
 </template>
 
@@ -24,9 +22,6 @@ export default {
     KanjiMiscItem
   },
   computed: {
-    codepointHex() {
-      return "U+" + this.kanji.utf16.toString(16).toUpperCase()
-    },
     kanjiType() {
       if (this.kanji.type === "nonJoyo") return "Non-Jōyō"
       else if (this.kanji.type === "joyo") return "Jōyō"

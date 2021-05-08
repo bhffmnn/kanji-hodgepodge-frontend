@@ -1,5 +1,5 @@
 <template>
-  <div id="main-box">
+  <div class="flexbox f-columns" id="main-box">
     <the-header/>
     <router-view/>
     <div class="footer">
@@ -21,6 +21,8 @@ export default {
 
 <style>
 #app {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 #main-box {

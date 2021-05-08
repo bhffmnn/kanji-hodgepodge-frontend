@@ -15,12 +15,10 @@
     <table class="main-table">
       <tr>
         <th>Form</th>
-        <th>Reading</th>
         <th>Meaning</th>
       </tr>
       <tr v-for="(vocable, vIndex) in topTenVocabulary" :key="vIndex"  >
-        <td class="nowrap">{{vocable.form}}</td>
-        <td class="nowrap">{{vocable.reading.value}}</td>
+        <td><ruby>{{vocable.form}}<rt class="main-font-size-small">{{vocable.reading.value}}</rt></ruby></td>
         <td>
           <div class="flexbox f-columns f-gap">          
             <span class="flexbox f-gap-small" v-for="(meaning, mIndex) in vocable.meanings" :key="mIndex">

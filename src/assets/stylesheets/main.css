@@ -10,28 +10,28 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-  font-size: var(--font-size-standard)
+  font-size: var(--font-size-standard);
 }
 body {
   line-height: 1.5;
 }
 h1 {
-  font-size: 36px;
+  font-size: calc(var(--font-size-standard) + 12px);
 }
 h2 {
-  font-size: 30px;
+  font-size: calc(var(--font-size-standard) + 10px);
 }
 h3 {
-  font-size: 24px;
+  font-size: calc(var(--font-size-standard) + 8px);
 }
 h4 {
-  font-size: 22px;
+  font-size: calc(var(--font-size-standard) + 6px);
 }
 h5 {
-  font-size: 20px;
+  font-size: calc(var(--font-size-standard) + 4px);
 }
 h6 {
-  font-size: 18px;
+  font-size: calc(var(--font-size-standard) + 2px);
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
@@ -50,7 +50,13 @@ h1, h2, h3, h4, h5, h6 {
     "TakaoEx明朝", TakaoExMincho, "MotoyaLCedar", "Droid Sans Japanese", serif;
 }
 .main-font-size-tiny {
-  font-size:10px!important;
+  font-size: calc(var(--font-size-standard) - 6px)!important;
+}
+.main-font-size-smaller {
+  font-size: calc(var(--font-size-standard) - 4px);
+}
+.main-font-size-small {
+  font-size: calc(var(--font-size-standard) - 2px);
 }
 .main-font-size-standard {
   font-size: var(--font-size-standard);
@@ -75,6 +81,9 @@ h1, h2, h3, h4, h5, h6 {
 .f-wrap {
   flex-wrap: wrap;
 }
+.f-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
 .f-align-end {
   align-items: flex-end;
 }
@@ -89,6 +98,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .f-justify-space-between {
   justify-content: space-between;
+}
+.f-justify-end {
+  justify-content: end;
 }
 .flex-grow {
   flex-grow: 1;

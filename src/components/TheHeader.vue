@@ -1,12 +1,12 @@
 <template>
   <div>
-    <header class="flexbox f-align-center f-justify-space-between">
+    <header style="flex-wrap: wrap-reverse;" class="flexbox f-align-center f-justify-space-between f-gap">
       <h1 class="flex-grow">Kanji Hodgepodge</h1>
-      <nav class="flexbox f-gap">
+      <nav class="flexbox f-justify-end f-gap flex-grow">
         <router-link :to="{name: 'Home'}">Home</router-link>
         <router-link :to="{name: 'About'}">About</router-link>
         <router-link :to="{name: 'Privacy'}">Privacy</router-link>
-      </nav>
+      </nav>  
     </header>
   </div>
 </template>
