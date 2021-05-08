@@ -58,7 +58,7 @@ export default {
     },
     async getKanjiObject() {
       const response = await fetch(
-        "http://localhost:5000/api/kanji/" + this.kanji
+        `http://${process.env.VUE_APP_API_PATH}:${process.env.VUE_APP_API_PORT}/api/kanji/${this.kanji}`
       );
       this.kanjiObject = await response.json();
     },

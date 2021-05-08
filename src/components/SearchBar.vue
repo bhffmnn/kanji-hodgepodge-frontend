@@ -18,22 +18,22 @@
 </template>
 
 <script>
-import ComponentSearch from "@/components/ComponentSearch"
-import {isHiragana, isKatakana, notCJK} from "@/util/cjk_util"
+import ComponentSearch from "@/components/ComponentSearch";
+import { isHiragana, isKatakana, notCJK } from "@/util/cjk_util";
 
 export default {
   components: {
-    ComponentSearch
+    ComponentSearch,
   },
-  data () {
+  data() {
     return {
       text: "",
       showComponentSearch: false,
-    }
+    };
   },
   methods: {
     toggleComponentSearchVisibilty() {
-      this.showComponentSearch = !this.showComponentSearch
+      this.showComponentSearch = !this.showComponentSearch;
     },
     setText(text) {
       this.text = text;
@@ -45,39 +45,39 @@ export default {
       let literalSearch = "";
       let meaningSearch = "";
       for (let s of searchInput.split(",")) {
-          if (isHiragana(s)) {
-              kunSearch = s;
-          }
-          else if (isKatakana(s)) {
-              onSearch = s;
-          }
-          else if (notCJK(s)) {
-              meaningSearch = s;
-          }
-          else if (s.length < 3) {
-              literalSearch = s;
-          }
-          else {
-              console.log(s + " is not a valid search item."); 
-          }
+        if (isHiragana(s)) {
+          kunSearch = s;
+        } else if (isKatakana(s)) {
+          onSearch = s;
+        } else if (notCJK(s)) {
+          meaningSearch = s;
+        } else if (s.length < 3) {
+          literalSearch = s;
+        } else {
+          console.log(s + " is not a valid search item.");
+        }
       }
       if (kunSearch || onSearch || literalSearch || meaningSearch) {
-          let queryString = "";
-          if (kunSearch) queryString = "kun=" + kunSearch;
-          if (onSearch) queryString += "on=" + onSearch;
-          if (literalSearch) queryString += "literal=" + literalSearch;
-          if (meaningSearch) queryString += "meaning=" + meaningSearch;  
-      
-          const response = await fetch('http://localhost:5000/api/kanji?' + queryString);
-          let results = await response.json();
-          this.$emit("searchResults", results.map(kanji => kanji.literal));
+        let queryString = "";
+        if (kunSearch) queryString = "kun=" + kunSearch;
+        if (onSearch) queryString += "on=" + onSearch;
+        if (literalSearch) queryString += "literal=" + literalSearch;
+        if (meaningSearch) queryString += "meaning=" + meaningSearch;
+
+        const response = await fetch(
+          `http://${process.env.VUE_APP_API_PATH}:${process.env.VUE_APP_API_PORT}/api/kanji?${queryString}`
+        );
+        let results = await response.json();
+        this.$emit(
+          "searchResults",
+          results.map((kanji) => kanji.literal)
+        );
+      } else {
+        this.$emit("searchResults", []);
       }
-      else {
-        this.$emit("searchResults", [])
-      }
-    }   
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
