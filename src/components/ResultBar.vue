@@ -1,23 +1,29 @@
 <template>
-  <div style="min-height: 3.2em;" class="scrollable main-white main-padding main-border">
-    <result-item v-for="result in results" :key="result" :result="result" />
-  </div>  
+  <div
+    style="height: 3.2em;"
+    class="flexbox f-align-center scrollable main-white main-padding main-border"
+  >
+    <router-link
+      class="main-button main-padding-small main-round-large"
+      style="flex-shrink: 0; height: 33px; width: 33px;"
+      v-for="result in results"
+      :key="result"
+      :to="{ name: 'Home', params: { kanji: result } }"
+      >{{ result }}</router-link
+    >
+  </div>
 </template>
 
 <script>
-import ResultItem from "@/components/ResultItem"
 
 export default {
   props: {
     results: {
       required: false,
-      type: Array
-    }
-  },
-  components: {
-    ResultItem
+      type: Array,
+    },
   }
-}
+};
 </script>
 
 <style scoped>
@@ -25,8 +31,8 @@ export default {
   box-sizing: border-box;
 }
 .scrollable {
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: thin; /* This is an experimental css feature*/
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin; /* This is an experimental css feature*/
 }
 </style>
