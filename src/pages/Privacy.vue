@@ -3,7 +3,7 @@
     <h2>
       Privacy Policy
     </h2>
-    <p>No personal data is stored, no statistics collected, no cookies used.</p>
+    <p>No personal data is stored.</p>
   </div>
 </template>
 
