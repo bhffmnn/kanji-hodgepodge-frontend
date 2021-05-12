@@ -13,10 +13,6 @@
       </button>
     </div>
     <table class="main-table">
-      <tr>
-        <th>Form</th>
-        <th>Meaning</th>
-      </tr>
       <tr v-for="(vocable, vIndex) in topTenVocabulary" :key="vIndex"  >
         <td><ruby>{{vocable.form}}<rt class="main-font-size-small">{{vocable.reading.value}}</rt></ruby></td>
         <td>
@@ -100,10 +96,13 @@ export default {
 }
 table {
     border-collapse: collapse;
-    border-style: hidden;
+    border-top: 1px solid #ccc;
 }
 table td, table th {
     border-bottom: 1px solid #ccc;
+}
+tr:last-child td, tr:last-child table th {
+    border-bottom: none;
 }
 .btn-active {
   border: 1px solid #ccc !important;
