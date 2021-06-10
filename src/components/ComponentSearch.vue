@@ -50,7 +50,7 @@ export default {
             this.literals = [];
           } else {
             const response = await fetch(
-              `http://${process.env.VUE_APP_API_PATH}:${process.env.VUE_APP_API_PORT}` +
+              `https://${process.env.VUE_APP_API_PATH}` +
               `/api/krad?components=${this.selectedComponents.join("")}`
             );
             const results = await response.json();
@@ -61,7 +61,7 @@ export default {
           e.target.classList.add("selectedComponent");
           this.selectedComponents.push(e.target.id);
           const response = await fetch(
-            `http://${process.env.VUE_APP_API_PATH}:${process.env.VUE_APP_API_PORT}` +
+            `https://${process.env.VUE_APP_API_PATH}` +
             `/api/krad?components=${this.selectedComponents.join("")}`
           );
           const results = await response.json();

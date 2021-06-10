@@ -82,7 +82,7 @@ export default {
         if (meaningSearch) queryString += "meaning=" + meaningSearch;
 
         const response = await fetch(
-          `http://${process.env.VUE_APP_API_PATH}:${process.env.VUE_APP_API_PORT}/api/kanji?${queryString}`
+          `https://${process.env.VUE_APP_API_PATH}/api/kanji?${queryString}`
         );
         let results = await response.json();
         this.$emit(
